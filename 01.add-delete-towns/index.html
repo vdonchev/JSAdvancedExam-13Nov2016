@@ -7,6 +7,7 @@
         width: 100px
     }</style>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="script.js"></script>
 </head>
 
 <body onload="attachEvents()">
@@ -24,26 +25,5 @@
     <input type="text" id="newItem"/>
     <button id="btnAdd">Add</button>
 </div>
-<script>
-    function attachEvents() {
-        $('#btnDelete').on('click', function () {
-            let forDelete = $('#towns').find(":selected");
-            forDelete.remove();
-        });
-
-        $('#btnAdd').on('click', function () {
-            let townName = $('#newItem');
-            if (townName.val().trim() != '') {
-                let selectBox = $('#towns');
-                let newTown = $('<option>')
-                        .text(townName.val());
-
-                selectBox.append(newTown);
-            }
-
-            townName.val('');
-        });
-    }
-</script>
 </body>
 </html>
