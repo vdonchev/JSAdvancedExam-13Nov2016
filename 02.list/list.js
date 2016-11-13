@@ -34,21 +34,3 @@ function createList() {
 }
 
 module.exports = createList;
-
-let list = createList();
-list.add(1);
-list.add("two");
-list.add(3);
-console.log(`list = [${list}]`);
-list.shiftLeft();
-console.log("shifted left <--");
-console.log(`list = [${list}]`);
-list.add(["four"]);
-console.log(`list = [${list}]`);
-list.shiftRight();
-console.log("shifted right -->");
-console.log(`list = [${list}]`);
-console.log(`Swaping [0] and [3]: ${list.swap(0,3)}`);
-console.log(`list = [${list}]`);
-console.log(`Swaping [1] and [1]: ${list.swap(1,1)}`);
-console.log(`list = [${list}]`);
